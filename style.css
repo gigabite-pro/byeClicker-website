@@ -40,6 +40,14 @@ body {
     z-index: 2;
 }
 
+.phone-nav-btn {
+    display: none;
+}
+
+.phone-nav {
+    display: none;
+}
+
 nav {
     position: fixed;
     width: 100vw;
@@ -257,6 +265,14 @@ li a:hover:after { transform: scaleX(1); }
     font-weight: 900;
     padding: 0;
     margin: 0;
+}
+
+#phone-pricing-head {
+    display: none;
+}
+
+#phone-cards {
+    display: none;
 }
 
 .pricing .cards {
