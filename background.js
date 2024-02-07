@@ -123,11 +123,26 @@ function App(conf) {
   }
 
   function updateSize() {
-    width = window.innerWidth * 2; cx = width / 2;
-    height = window.innerHeight * 2; cy = height / 2;
+    if (window.innerWidth < 768) {
+      width = window.innerWidth;
+      cx = width / 2;
+      height = window.innerHeight / 2;
+      cy = height / 2;
+      conf.fov = 60; // Adjust the field of view for small screens
+      conf.cameraZ = 100; // Adjust the camera position for small screens
+    } else {
+      width = window.innerWidth * 2;
+      cx = width / 2;
+      height = window.innerHeight * 2;
+      cy = height / 2;
+      conf.fov = 75; // Reset the field of view for large screens
+      conf.cameraZ = 75; // Reset the camera position for large screens
+    }
     if (renderer && camera) {
       renderer.setSize(width, height);
       camera.aspect = width / height;
+      camera.fov = conf.fov; // Update the camera field of view
+      camera.position.z = conf.cameraZ; // Update the camera position
       camera.updateProjectionMatrix();
       const wsize = getRendererSize();
       wWidth = wsize[0];

@@ -7,20 +7,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/410f94a1ed.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
     <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
     <title>ByeClicker</title>
   </head>
   <body>
 
+    <!-- Phone Nav -->
+    <div class="phone-nav-btn">
+      <i class="fas fa-stream" id="phone-nav-btn"></i>
+  </div>
+
+  <div class="phone-nav" id="phone-nav">
+      <div>
+          <i class="fas fa-times" id="cross"></i>
+      </div>
+      <nav>
+          <ul>
+              <a href="#home" class="nav-link" class="animp1">
+                  <li>Home</li>
+              </a>
+              <a href="#about" class="nav-link" class="animp1">
+                  <li>About</li>
+              </a>
+              <a href="#pricing" class="nav-link" class="animp1">
+                  <li>Pricing</li>
+              </a>
+          </ul>
+      </nav>
+    </div>
+    <!-- Phone Nav -->
+
+    <!-- Desktop Nav  -->
     <div class="logo">
     </div>
     <nav data-aos="fade-down" id="nav">
       <ul>
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#pricing" class="nav-link">Pricing</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#pricing">Pricing</a></li>
       </ul>
     </nav>
+    <!-- Desktop Nav  -->
 
     <section id="home" class="home">
       <div class="home-left"></div>
@@ -44,11 +72,16 @@
         <div class="about-bg" data-aos="zoom-in">
         
         </div>
+
+        <div class="about-bg-phone">
+
+        </div>
       </div>
     </section>
 
     <section id="pricing" class="pricing">
       <h1 data-aos="fade-up">Pricing</h1>
+      <h1 id="phone-pricing-head">Pricing</h1>
       <div class="cards" data-aos="flip-up">
 
         <div class="card card1">
@@ -84,7 +117,48 @@
         </div>
 
       </div>
+
+      <div class="cards" id="phone-cards">
+
+        <div class="card card1">
+          <div class="head">
+            <h2>Free</h2>
+            <p class="price">C$ 0 <span>/month</span></p>
+          </div>
+          <div class="body">
+            <ul>
+              <li><i class="fa-solid fa-check icon"></i> Auto joins class</li>
+              <li><i class="fa-solid fa-check icon"></i>Automatically answers poll questions</li>
+              <li><i class="fa-solid fa-check icon"></i>Randomizes Answers</li>
+            </ul>
+          </div>
+          <button class="btn pricing-started" onclick="showExtension()">Get Started!</button>
+        </div>
+
+        <div class="card card2">
+          <div class="head">
+            <h2>Pro</h2>
+            <p class="price">C$ 1.99 <span>/month</span></p>
+          </div>
+          <div class="body">
+            <ul>
+              <li><i class="fa-solid fa-check icon"></i> Auto joins class</li>
+              <li><i class="fa-solid fa-check icon"></i>Automatically answers poll questions</li>
+              <li><i class="fa-solid fa-check icon"></i>Randomizes Answers</li>
+              <li><i class="fa-solid fa-check icon"></i>Picks the most chosen answer</li>
+              <li><i class="fa-solid fa-check icon"></i>Email notifications</li>
+            </ul>
+          </div>
+          <button class="btn" onclick="changeToSubscribe()">Upgrade!</button>
+        </div>
+
+      </div>
     </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script>
+      var timeline = gsap.timeline();
+    </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({

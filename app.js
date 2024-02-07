@@ -30,3 +30,25 @@ function changeToSubscribe() {
 function showExtension() {
     window.location.href = 'https://chromewebstore.google.com/detail/byeclicker/kmnlnlkcacgjkngggifcnalkldgpflic';
 }
+
+document.getElementById('phone-nav-btn').addEventListener('click', ()=>{
+    var timeline3 = gsap.timeline()
+    timeline3.to('#phone-nav', {left: '0%', duration: 0.2})
+    .from('.animp1', {opacity: 0, y: '-50', stagger: .1, duration: 0.2})
+})
+
+document.getElementById('cross').addEventListener('click', ()=>{
+    var timeline3 = gsap.timeline()
+    timeline3.to('.animp1', {opacity: 0, y: '-50', stagger: .1, duration: 0.2})
+    .to('#phone-nav', {left: '100%', duration: 0.2})
+    timeline3.set('.animp1', {opacity: 1, y: '0'})
+})
+
+document.querySelectorAll('.nav-link').forEach((link) => {
+    link.addEventListener('click', ()=>{
+        var timeline3 = gsap.timeline()
+        timeline3.to('.animp1', {opacity: 0, y: '-50', stagger: .1, duration: 0.2})
+        .to('#phone-nav', {left: '100%', duration: 0.2})
+        timeline3.set('.animp1', {opacity: 1, y: '0'})
+    })
+});

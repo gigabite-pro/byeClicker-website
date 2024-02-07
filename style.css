@@ -248,7 +248,7 @@ li a:hover:after { transform: scaleX(1); }
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: var(--Blue-Gradient, linear-gradient(99deg, #f20dd3 0, #00fff7 100%));;
+    background: var(--Blue-Gradient, linear-gradient(99deg, #f20dd3 0, #00fff7 100%));
 }
 
 .pricing h1{
