@@ -14,26 +14,57 @@ body {
     color: white;
 }
 
+*::-webkit-scrollbar {
+    width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(89, 88, 88);
+    border-radius: 10px;
+}
+
+.logo {
+    width: 2.5vw;
+    height: 2.5vw;
+    background: url('assets/logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: fixed;
+    left: 1vw;
+    top: 0.7vw;
+    z-index: 2;
+}
+
 nav {
-    position: absolute;
+    position: fixed;
     width: 100vw;
     padding-top: 0.5vw;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul {
+    width: 21vw;
     display: flex;
-    justify-content: center;
-    padding-right: 1.19vw;
+    justify-content: space-evenly;
+    padding-right: 1vw;
 }
 
 nav ul li {
     list-style: none;
-    margin: 0 20px;
+    text-align: center;
 }
 
 li a{
     color: white;
     text-decoration: none;
+    text-align: center;
 }
 
 a:after {
@@ -46,17 +77,14 @@ a:after {
 
 a:hover:after { transform: scaleX(1); }
 
-.btn:hover {
-    cursor: pointer;
-}
-
 .home {
     width: 100vw;
-    height: 100vh;
+    height: 120vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    clip-path: ellipse(100% 55% at 48% 40%);
 }
 
 .home-left {
@@ -118,7 +146,7 @@ a:hover:after { transform: scaleX(1); }
 
 .text {
     text-align: center;
-    padding-bottom: 5vw;
+    padding-bottom: 10vw;
 }
 
 .home h1 {
@@ -146,14 +174,21 @@ a:hover:after { transform: scaleX(1); }
     transition: 300ms ease-in-out;
 }
 
+.get-started:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
 #background{
     position: absolute;
     width: 100vw;
     height: 100vh;
+    margin-top: -20vw;
     z-index: -1;
 }
 
 .about {
+    position: relative;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -190,6 +225,20 @@ a:hover:after { transform: scaleX(1); }
     width: 100%;
     height: 65vh;
     transform: rotateY(180deg) scale(1.3);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
 }
 
 .pricing {
@@ -198,7 +247,8 @@ a:hover:after { transform: scaleX(1); }
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: white;
+    align-items: center;
+    background: var(--Blue-Gradient, linear-gradient(99deg, #f20dd3 0, #00fff7 100%));;
 }
 
 .pricing h1{
@@ -207,4 +257,87 @@ a:hover:after { transform: scaleX(1); }
     font-weight: 900;
     padding: 0;
     margin: 0;
+}
+
+.pricing .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.5vw;
+}
+
+.card {
+    width: 25vw;
+    height: 65vh;
+    background-color: rgb(34, 34, 34);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.card .head {
+    padding-top: 2vw;
+}
+
+.card .head h2 {
+    font-size: 3vw;
+    font-weight: 900;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.price {
+    margin-top: 0.5vw;
+    font-size: 2vw;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.price span {
+    font-size: 1vw;
+    font-weight: 300;
+}
+
+.card ul li {
+    list-style: none;
+    padding: 0.5vw 0;
+    font-size: 1vw;
+}
+
+.icon {
+    color: #28a745;
+    margin-right: 0.5vw;
+}
+
+.btn {
+    background: var(--Blue-Gradient, linear-gradient(99deg, #f20dd3 0, #00fff7 100%));
+    border: none;
+    border-radius: 6px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 0.9vw;
+    padding: 0.8vw 1.2vw;
+    position: absolute;
+    bottom: 3vw;
+    transition-duration: 200ms;
+}
+
+.btn:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.pricing-started {
+    background: white;
+}
+
+.card1 {
+    border-radius: 8px 0 0 8px;
+    border-right: 1px solid white;
+}
+
+.card2 {
+    border-radius: 0 8px 8px 0;
 }

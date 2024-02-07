@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/410f94a1ed.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
     <title>ByeClicker</title>
   </head>
   <body>
 
-    <nav data-aos="fade-down">
+    <div class="logo">
+    </div>
+    <nav data-aos="fade-down" id="nav">
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#pricing" class="nav-link">Pricing</a></li>
       </ul>
     </nav>
 
@@ -23,7 +28,7 @@
       <div class="text" data-aos="fade-up">
         <h1>ByeClicker</h1>
         <p>Automatically answers iClicker poll questions for you!</p>
-        <button class="btn get-started">Get Started!</button>
+        <button class="get-started">Get Started!</button>
       </div>
       <canvas id="background" data-aos="fade-up" data-aos-duration="1500"></canvas>
     </section>
@@ -36,18 +41,48 @@
         <p>ByeClicker is a web application that automatically answers iClicker poll questions for you. It uses a machine learning model to predict the correct answer to the question and submits it for you. This saves you time and allows you to focus on other things during class.</p>
       </div>
       <div class="right">
-        <div class="about-bg">
+        <div class="about-bg" data-aos="zoom-in">
         
         </div>
       </div>
     </section>
 
     <section id="pricing" class="pricing">
-      <h1>Pricing</h1>
-      <div class="cards">
-        <div class="card">
+      <h1 data-aos="fade-up">Pricing</h1>
+      <div class="cards" data-aos="flip-up">
 
+        <div class="card card1">
+          <div class="head">
+            <h2>Free</h2>
+            <p class="price">C$ 0 <span>/month</span></p>
+          </div>
+          <div class="body">
+            <ul>
+              <li><i class="fa-solid fa-check icon"></i> Auto joins class</li>
+              <li><i class="fa-solid fa-check icon"></i>Automatically answers poll questions</li>
+              <li><i class="fa-solid fa-check icon"></i>Randomizes Answers</li>
+            </ul>
+          </div>
+          <button class="btn pricing-started">Get Started!</button>
         </div>
+
+        <div class="card card2">
+          <div class="head">
+            <h2>Pro</h2>
+            <p class="price">C$ 1.99 <span>/month</span></p>
+          </div>
+          <div class="body">
+            <ul>
+              <li><i class="fa-solid fa-check icon"></i> Auto joins class</li>
+              <li><i class="fa-solid fa-check icon"></i>Automatically answers poll questions</li>
+              <li><i class="fa-solid fa-check icon"></i>Randomizes Answers</li>
+              <li><i class="fa-solid fa-check icon"></i>Picks the most chosen answer</li>
+              <li><i class="fa-solid fa-check icon"></i>Email notifications</li>
+            </ul>
+          </div>
+          <button class="btn">Upgrade!</button>
+        </div>
+
       </div>
     </section>
     <!-- <div id="paypal-button-container-P-0H78694101180952GMXBCGCY"></div>

@@ -122,21 +122,9 @@ function App(conf) {
     light4.position.z = Math.cos(time * 0.8) * d;
   }
 
-  function updateLightsColors() {
-    conf.light1Color = chroma.random().hex();
-    conf.light2Color = chroma.random().hex();
-    conf.light3Color = chroma.random().hex();
-    conf.light4Color = chroma.random().hex();
-    light1.color = new THREE.Color(conf.light1Color);
-    light2.color = new THREE.Color(conf.light2Color);
-    light3.color = new THREE.Color(conf.light3Color);
-    light4.color = new THREE.Color(conf.light4Color);
-    // console.log(conf);
-  }
-
   function updateSize() {
-    width = window.innerWidth; cx = width / 2;
-    height = window.innerHeight; cy = height / 2;
+    width = window.innerWidth * 2; cx = width / 2;
+    height = window.innerHeight * 2; cy = height / 2;
     if (renderer && camera) {
       renderer.setSize(width, height);
       camera.aspect = width / height;
@@ -155,3 +143,12 @@ function App(conf) {
     return [width, height];
   }
 }
+
+window.addEventListener('scroll', (e) => {
+  // change nav colors to black when scroll goes below 1121.5
+  if (window.scrollY > (2 * window.innerHeight)) {
+    document.getElementById('nav').style.backgroundColor = '#0d1117';
+  } else {
+    document.getElementById('nav').style.backgroundColor = 'transparent';
+  }
+});
