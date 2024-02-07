@@ -67,7 +67,7 @@ li a{
     text-align: center;
 }
 
-a:after {
+li a:after {
     display: block;
     content: '';
     border-bottom: solid 3px white;  
@@ -75,7 +75,7 @@ a:after {
     transition: transform 200ms ease-in-out;
 }
 
-a:hover:after { transform: scaleX(1); }
+li a:hover:after { transform: scaleX(1); }
 
 .home {
     width: 100vw;
@@ -340,4 +340,26 @@ a:hover:after { transform: scaleX(1); }
 
 .card2 {
     border-radius: 0 8px 8px 0;
+}
+
+/* Subscribe Page */
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: var(--Blue-Gradient, linear-gradient(99deg, #f20dd3 0, #00fff7 100%));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-subscribe {
+    border-radius: 8px;
+    height: auto;
+    padding-bottom: 1vw;
+}
+
+.payment-buttons{
+    margin-top: 1vw;
+    width: 25vw;
 }

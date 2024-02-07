@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/410f94a1ed.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>ByeClicker | Subscribe</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card card-subscribe" data-aos="flip-up">
+            <div class="head">
+              <h2>Pro</h2>
+              <p class="price">C$ 1.99 <span>/month</span></p>
+            </div>
+            <div class="body">
+              <ul>
+                <li><i class="fa-solid fa-check icon"></i>Auto joins class</li>
+                <li><i class="fa-solid fa-check icon"></i>Automatically answers poll questions</li>
+                <li><i class="fa-solid fa-check icon"></i>Randomizes Answers</li>
+                <li><i class="fa-solid fa-check icon"></i>Picks the most chosen answer</li>
+                <li><i class="fa-solid fa-check icon"></i>Email notifications</li>
+              </ul>
+            </div>
+          </div>
+
+        <div class="payment-buttons">
+            <div id="paypal-button-container-P-0H78694101180952GMXBCGCY"></div>
+        </div>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+        <script src="verify.js"></script>
+        <script src="https://www.paypal.com/sdk/js?client-id=Abxqi1RjQw_8z8dGdZfAqith7tJUmvSp7uuCbGR-MS8nIQBIzNzRrjgKEP3a2VJQh6ZpsqrdwPQ3wKtB&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+        <script>
+            var notyf = new Notyf({
+                duration: 3000,
+                position: {
+                    x: 'center',
+                    y: 'top',
+                },
+                dismissible: true
+            });
+            paypal.Buttons({
+                style: {
+                    shape: 'rect',
+                    color: 'gold',
+                    layout: 'vertical',
+                    label: 'subscribe'
+                },
+                onClick: function(actions) {
+                    if(verifyBeforePayment()) {
+                        return actions.showPopup();
+                    }
+                },
+                createSubscription: function(data, actions) {
+                    return actions.subscription.create({
+                    /* Creates the subscription */
+                    plan_id: 'P-0H78694101180952GMXBCGCY'
+                    });
+                },
+                onApprove: function(data, actions) {
+                    notyf.success('Payment Successful!');
+                    notyf.success('Redirecting to Chrome Web Store...');
+                    setTimeout(() => {
+                       window.location.href = `https://chromewebstore.google.com/detail/byeclicker/kmnlnlkcacgjkngggifcnalkldgpflic`
+                    }, 3000);
+                },
+                onError: function(err) {
+                    notyf.error('Payment Failed!')
+                },
+                onCancel: function(data) {
+                    notyf.error('Payment Cancelled!')
+                }
+            }).render('#paypal-button-container-P-0H78694101180952GMXBCGCY'); // Renders the PayPal button
+        </script>
+    </div>
+</body>
+</html>
