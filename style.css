@@ -202,6 +202,10 @@ li a:hover:after { transform: scaleX(1); }
     display: flex;
 }
 
+.phone-left {
+    display: none;
+}
+
 .left {
     width: 40%;
     height: 100vh;
@@ -356,6 +360,21 @@ li a:hover:after { transform: scaleX(1); }
 
 .card2 {
     border-radius: 0 8px 8px 0;
+}
+
+  
+@keyframes glower {
+    0% {
+      background-position: 0 0;
+    }
+    
+    50% {
+      background-position: 400% 0;
+    }
+    
+    100% {
+      background-position: 0 0;
+    }
 }
 
 /* Subscribe Page */

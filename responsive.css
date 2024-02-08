@@ -84,13 +84,7 @@
     }
 
     #background {
-        position: relative;
-        margin-top: -140vw;
-    }
-
-    .text {
-        padding: 0;
-        padding-top: 50vw;
+        display: none;
     }
 
     .home-left, .home-right {
@@ -120,12 +114,13 @@
     .about {
         flex-direction: column-reverse;
         width: 100vw;
-        height: 100vh;
+        height: 210vw;
+        padding-bottom: 5vw;
     }
 
     .left {
         width: 90vw;
-        display: flex;
+        display: none;
         flex-direction: column;
         padding-left: 7vw;
         justify-content: center;
@@ -139,8 +134,13 @@
         margin: 0;
     }
 
+    .phone-left {
+        display: flex;
+    }
+
     .right {
         width: 100vw;
+        height: 45vh;
         display: flex;
         justify-content: center;
         align-items: center;
