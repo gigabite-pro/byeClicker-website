@@ -78,6 +78,10 @@
         display: none;
     }
 
+    .btn {
+        color: black;
+    }
+
     .home {
         clip-path: none;
         height: 100vh;
@@ -245,6 +249,10 @@
         list-style: none;
         padding: 2vw 0;
         font-size: 4vw;
+    }
+
+    .card1 {
+        border: none;
     }
     
     .icon {
