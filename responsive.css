@@ -80,11 +80,13 @@
 
     .home {
         clip-path: none;
-        justify-content: space-evenly;
+        height: 100vh;
+        justify-content: end;
     }
 
     #background {
-        display: none;
+        position: relative;
+        height: 100vw !important;
     }
 
     .home-left, .home-right {
@@ -114,7 +116,7 @@
     .about {
         flex-direction: column-reverse;
         width: 100vw;
-        height: 210vw;
+        height: 150vh;
         padding-bottom: 5vw;
     }
 
@@ -140,7 +142,7 @@
 
     .right {
         width: 100vw;
-        height: 45vh;
+        height: unset;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -176,7 +178,8 @@
 
     .pricing {
         justify-content: start;
-        height: 140vh;
+        height: unset;
+        padding-bottom: 10vw;
     }
 
     .pricing h1 {
@@ -203,7 +206,7 @@
 
     .card {
         width: 80vw;
-        height: 50vh;
+        height: 60vh;
         border-radius: 10px;
         margin-top: 10vw;
         z-index: 0;
@@ -262,5 +265,58 @@
     .payment-buttons{
         margin-top: 6vw;
         width: 80vw;
+    }
+
+    .footer {
+        flex-direction: column;
+        padding-bottom: 10vw;
+        height: 75vh;
+    }
+
+    .footer-top {
+        flex-direction: column;
+    }
+
+    .footer-left {
+        width: 80vw;
+    }
+
+    .footer-left h1{
+        font-size: 8vw;
+        font-weight: 900;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-left p{
+        font-size: 4vw;
+        font-weight: 300;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-right {
+        width: 100vw;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0;
+        padding-top: 10vw;
+        padding-left: 26vw;
+    }
+
+    .footer-right h2 {
+        font-size: 6vw;
+        font-weight: 900;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-right ul{
+        padding: 0;
+    }
+
+    .footer-right ul li{
+        padding: 2vw 0;
+        font-size: 4vw;
     }
 }

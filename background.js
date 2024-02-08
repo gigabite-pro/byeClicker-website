@@ -126,10 +126,10 @@ function App(conf) {
     if (window.innerWidth < 768) {
       width = window.innerWidth;
       cx = width / 2;
-      height = window.innerHeight / 2;
+      height = window.innerHeight * 2;
       cy = height / 2;
       conf.fov = 60; // Adjust the field of view for small screens
-      conf.cameraZ = 100; // Adjust the camera position for small screens
+      conf.cameraZ = 300; // Adjust the camera position for small screens
     } else {
       width = window.innerWidth * 2;
       cx = width / 2;
