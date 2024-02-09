@@ -183,7 +183,7 @@
     .features {
         flex-direction: column;
         padding-bottom: 10vw;
-        height: 190vh;
+        height: 200vh;
     }
 
     .features h1 {
@@ -191,7 +191,12 @@
     }
 
     .feature-cards {
+        display: none;
         width: 100vw;
+    }
+
+    .phone-cards {
+        display: flex;
     }
 
     .feature-card {

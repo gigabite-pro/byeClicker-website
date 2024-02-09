@@ -280,6 +280,10 @@ li a:hover:after { transform: scaleX(1); }
     flex-wrap: wrap;
 }
 
+.phone-cards {
+    display: none;
+}
+
 .feature-card {
     width: 20vw;
     height: 50vh;
