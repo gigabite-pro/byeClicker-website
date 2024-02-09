@@ -516,7 +516,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding-right: 5.5vw;
+    padding-right: 4.5vw;
 }
 
 .footer-right ul li {
