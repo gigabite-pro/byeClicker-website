@@ -33,6 +33,7 @@ function showExtension() {
 
 document.getElementById('phone-nav-btn').addEventListener('click', ()=>{
     var timeline3 = gsap.timeline()
+    document.getElementById('phone-nav').style.display = 'flex';
     timeline3.to('#phone-nav', {left: '0%', duration: 0.2})
     .from('.animp1', {opacity: 0, y: '-50', stagger: .1, duration: 0.2})
 })
@@ -42,6 +43,9 @@ document.getElementById('cross').addEventListener('click', ()=>{
     timeline3.to('.animp1', {opacity: 0, y: '-50', stagger: .1, duration: 0.2})
     .to('#phone-nav', {left: '100%', duration: 0.2})
     timeline3.set('.animp1', {opacity: 1, y: '0'})
+    setTimeout(()=>{
+        document.getElementById('phone-nav').style.display = 'none';
+    }, 500);
 })
 
 document.querySelectorAll('.nav-link').forEach((link) => {
