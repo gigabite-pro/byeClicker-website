@@ -54,7 +54,7 @@
     .phone-nav nav ul{
         display: flex;
         flex-direction: column;
-        padding-right: 4vw;
+        padding-right: 14vw;
         list-style: none;
     }
 
@@ -180,7 +180,42 @@
         }
     }
 
-    .pricing {
+    .features {
+        flex-direction: column;
+        padding-bottom: 10vw;
+        height: 190vh;
+    }
+
+    .features h1 {
+        font-size: 8vw;
+    }
+
+    .feature-cards {
+        width: 100vw;
+    }
+
+    .feature-card {
+        width: 80vw;
+        height: 35vh;
+        margin-top: 10vw;
+        padding: 5vw;
+        border-radius: 10px;
+        padding-bottom: -1vw;
+    }
+
+    .feature-card h2 {
+        font-size: 6vw;
+        font-weight: 900;
+    }
+
+    .feature-card p {
+        font-size: 4vw;
+        font-weight: 300;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* .pricing {
         justify-content: start;
         height: unset;
         padding-bottom: 10vw;
@@ -273,7 +308,7 @@
     .payment-buttons{
         margin-top: 6vw;
         width: 80vw;
-    }
+    } */
 
     .footer {
         flex-direction: column;
